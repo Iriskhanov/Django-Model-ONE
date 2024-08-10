@@ -7,4 +7,4 @@ admin.site.register(Address)
 
 @admin.register(CheckoutCart)
 class Fruits(admin.ModelAdmin):
-    list_display = ['choose_fruits', 'basket_size', 'decorations']
+    list_display = ['decorations', 'occasion', 'basket_size']
