@@ -34,7 +34,7 @@ class Car(models.Model):
     
     color = models.CharField(max_length=50, verbose_name= 'цвет')
     year = models.PositiveSmallIntegerField(verbose_name= 'год выпуска')
-    image = models.FileField()
+    image = models.ImageField(upload_to='images/', verbose_name='фото машины')
     engine_volume = models.FloatField(validators=[MinValueValidator(0.0)], default=0.0, verbose_name= 'объем двигателя')
     fuel_type = models.ManyToManyField('FuelType')
     brand = models.ForeignKey('CarBrand', on_delete=models.CASCADE)
